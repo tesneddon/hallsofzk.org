@@ -1,0 +1,20 @@
+<head>
+  <title>{% if page.title | size != 0 %} {{ page.title }} | {% endif %}The Halls Of ZK</title>
+  {% if page.description %}
+    <meta name="description" content="{{ page.description }}">
+  {% endif %}
+  {% if page.keywords %}
+    <meta name="keywords" content="{{ page.keywords }}">
+  {% endif %}
+  <meta name="author" content="humans.txt">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
+  <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
+  {% if page.jqueryui %}
+    <script src="{{ site.baseurl }}/js/jquery.ui.min.js"></script>
+  {% endif %}
+  <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+  <link href="{{ site.baseurl }}/css/styles.css" rel="stylesheet">
+</head>
+
