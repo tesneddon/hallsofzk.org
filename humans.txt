@@ -1,0 +1,24 @@
+---
+layout: null
+---
+/* TEAM */
+  Web Developer: Tim Sneddon
+  Site: http://tim.sneddon.id.au
+  Twitter: @tesneddon
+  Location: Perth, Western Australia
+
+/* THANKS */
+  Flickr: featherlite
+  Image: https://www.flickr.com/photos/featherlite/3482738734/in/photostream/
+  Website: https://www.flickr.com/photos/featherlite/
+
+  Name: Kevin Utting
+  Flickr: tallkev
+  Image: https://www.flickr.com/photos/tallkev/256810217/
+  Website: https://www.flickr.com/photos/tallkev/
+
+/* SITE */
+  Last update: {{ site.time | date: "%Y/%m/%d" }}
+  Site Url: https://hallsofzk.org
+  Language: English
+  IDE: TECO V40

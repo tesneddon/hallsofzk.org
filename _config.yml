@@ -1,5 +1,16 @@
-baseurl:    
-exclude:    [ 'bower_components', 'config.rb', 'node_modules',
-              '_*', 'tmp/*', '*.json', 'Gruntfile.js' ]
+title:      The Halls of ZK
+baseurl:    ""
+
+exclude:    [ 'Gemfile', 'Gemfile.lock', '.ruby-version', 'README.md',
+              'tmp/', 'index.tim' ]
+
+sass:
+  style: compressed
+  sourcemap: development
+  # Bootstrap 3 and Font Awesome 4 predate the Sass module system; don't
+  # flood the build with their deprecation warnings.
+  quiet_deps: true
+  silence_deprecations: [ 'import' ]
+
 host:       0.0.0.0
 port:       8000
