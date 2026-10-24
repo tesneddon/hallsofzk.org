@@ -327,6 +327,7 @@ a:focus {
 
 .content-section {
     width: 100%;
+    max-width: none;  // full width even when also a .container
     padding-top: $navbar-height;
     color: $light;
     background-color: $dark;
