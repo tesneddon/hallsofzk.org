@@ -1,0 +1,5 @@
+baseurl:    
+exclude:    [ 'bower_components', 'config.rb', 'node_modules',
+              '_*', 'tmp/*', '*.json', 'Gruntfile.js' ]
+host:       0.0.0.0
+port:       8000

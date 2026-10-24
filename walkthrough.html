@@ -5,7 +5,7 @@ title: Walkthrough
 
 ---
 
-  <section id="play" class="content-section">
+  <section id="walkthrough" class="content-section">
     <div class="container">
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
@@ -13,18 +13,54 @@ title: Walkthrough
         </div>
         <div class="col-md-10 col-md-offset-1">
           <p>
-            The following is an HTML-ization of the
-            <a href="https://github.com/tesneddon/zk/blob/master/zk/wizardry.txt" target="_blank">WIZARDRY.TXT</a>
-            file found in the ZK source distribution.  It covers, in bullet
-            points, how to work your way through the game and collect
-            your points.
+            The following slide deck has been created based on a
+            collection of cheesey orignal DEC <a href="#">test slides</a>
+            and the
+            <a href="https://github.com/tesneddon/zk/blob/master/zk/wizardry.txt" target="_blank">
+              WIZARDRY.TXT</a>
+            that shipped with the original source code.  While the guide
+            is not step-by-step in all cases, it does suck a lot of the
+            magic out of it.  So, hopefully you're only here because
+            you're stuck.
           </p>
         </div>
       </div>
       <div class="row">
         <div class="col-md-10 col-md-offset-1">
-          <p>
+          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner" role="listbox">
+              <!-- Slides -->
+{% for img in site.data.zk_wizardry %}
+  {% if forloop.first %}
+              <div class="item active">
+  {% else %}
+              <div class="item">
+  {% endif %}
+                <img src="{{ site.url }}/img/{{img.name}}" alt="">
+                <div class="carousel-caption">{{ img.caption }}</div>
+              </div>
+{% endfor  %}
+            </div>
 
+              <!-- Controls -->
+            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+              <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+              <span class="sr-only">Next</span>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-10 col-md-offset-1">
+          <p>
+            This walkthrough can also be downloaded as a
+            <a href="{{ site.url }}/pdf/zk_wizardry.pdf" target="_blank">PDF document</a>
+            or in the original
+            <a href="https://github.com/tesneddon/zk/raw/master/zk/wizardry.txt" target="_blank">
+            ASCII text</a>
+            format.
           </p>
         </div>
       </div>

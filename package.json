@@ -8,7 +8,11 @@
     "grunt-contrib-copy": "*",
     "grunt-contrib-less": "*",
     "grunt-contrib-uglify": "*",
-    "grunt-exec": "*"
+    "grunt-humans-txt": "^0.2.1",
+    "grunt-ftp-deploy": "^0.1.10",
+    "grunt-exec": "*",
+    "grunt-jekyll": "^0.4.3",
+    "jekyll": "^3.0.0-beta1"
   },
   "engines": {
     "npm": "1.2.x"
@@ -27,7 +31,8 @@
   },
   "keywords": [
     "zk",
-    "vms", "openvms",
+    "vms",
+    "openvms",
     "text"
   ],
   "author": "Tim Sneddon",
@@ -37,4 +42,3 @@
   },
   "homepage": "http://hallsofzk.org"
 }
-

@@ -99,9 +99,14 @@ title: Play
             the relevant, architecture specific savset and run without installing
             system-wide.  To do this, execute the following commands:
           <pre>
-$ BACKUP ZKnnn.x/SAVE_SET []
-$ RUN ZK$MAIN.EXE
-          </pre>
+$ VERSION = "011"
+$ ARCH_TYPE = F$GETSYI("ARCH_TYPE")
+$ ARCH_EXTN = F$ELEMENT(ARCH_TYPE,",",",B,C,D") - ","
+$ COPY/FTP/ANONYMOUS/VERBOSE/LOG -
+    ftp.endlesssoftware.com.au::"/pub/zk/kits/zk''VERSION'.''ARCH_EXTN'" -
+    SYS$DISK:[]
+$ BACKUP ZK'VERSION'.'ARCH_EXTN'/SAVE_SET []
+$ RUN ZK$MAIN.EXE</pre>
           </p>
         </div>
       </div>
