@@ -2,11 +2,15 @@
 # Front matter tells Jekyll to compile this file with Sass.
 ---
 
+// Font Awesome uses the Sass module system, so it has to come first.
+@use "font-awesome/variables" with ($font-path: "../fonts");
+@use "font-awesome/fontawesome";
+@use "font-awesome/solid";
+
 // Custom variables must come first so they override Bootstrap's !default
-// values (LESS evaluated these lazily, Sass does not).
+// values.
 @import "settings";
 
-@import "bootstrap";
-@import "font-awesome";
+@import "bootstrap/bootstrap";
 
 @import "custom";

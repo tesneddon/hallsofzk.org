@@ -1,14 +1,90 @@
 // Custom Bootstrap variables (set before Bootstrap is imported)...
 //
+// The site was designed against Bootstrap 3, so these restore Bootstrap 3's
+// metrics wherever Bootstrap 5's defaults differ.
+
+//== Options
+//
+//##
+$enable-rfs:            false;
+$enable-smooth-scroll:  false;  // navbar.js does its own eased scrolling
+
+//== Typography
+//
+//##
+$font-size-base:        .875rem;  // 14px
+$line-height-base:      1.428571429;
+$font-family-sans-serif: "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-family-monospace: Menlo, Monaco, Consolas, "Courier New", monospace;
+
+$h1-font-size:          36px;
+$h2-font-size:          30px;
+$h3-font-size:          24px;
+$h4-font-size:          18px;
+$h5-font-size:          14px;
+$h6-font-size:          12px;
+$headings-font-weight:  500;
+$headings-line-height:  1.1;
+$headings-margin-bottom: 10px;
+
+$link-decoration:       none;
+
+//== Grid
+//
+//##
+$grid-breakpoints: (
+  xs: 0,
+  sm: 768px,
+  md: 992px,
+  lg: 1200px
+);
+$container-max-widths: (
+  sm: 750px,
+  md: 970px,
+  lg: 1170px
+);
+$grid-gutter-width:     30px;
+
+//== Components
+//
+//##
+$border-radius:         4px;
+$border-radius-sm:      3px;
+$border-radius-lg:      6px;
+
+$btn-padding-y-lg:      10px;
+$btn-padding-x-lg:      16px;
+$btn-font-size-lg:      18px;
+
+$thumbnail-padding:     4px;
+$thumbnail-bg:          #fff;
+$thumbnail-border-color: #ddd;
+$thumbnail-box-shadow:  none;
+
+$caret-width:           4px;
+$caret-spacing:         6px;
 
 //== Navbar
 //
 //##
-$navbar-height: 36px;
-$navbar-padding-vertical: 8px;
+$navbar-height:         36px;  // used by _custom.scss (Bootstrap 3 variable)
+$navbar-padding-y:      0;
+$navbar-brand-font-size: 1.125rem;  // 18px
+$navbar-brand-padding-y: .5rem;    // 8px
+$navbar-nav-link-padding-x: .9375rem;  // 15px
 
-//== Asset paths
+//== Dropdowns
 //
 //##
-$icon-font-path: "../fonts/";
-$fa-font-path: "../fonts";
+$dropdown-min-width:    160px;
+$dropdown-padding-y:    5px;
+$dropdown-spacer:       0;
+$dropdown-font-size:    14px;
+$dropdown-border-color: rgba(0,0,0,.15);
+$dropdown-divider-bg:   #e5e5e5;
+$dropdown-divider-margin-y: 9px;
+$dropdown-link-color:   #333;
+$dropdown-link-hover-color: #262626;
+$dropdown-link-hover-bg: #f5f5f5;
+$dropdown-item-padding-y: 3px;
+$dropdown-item-padding-x: 20px;

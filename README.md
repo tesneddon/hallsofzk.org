@@ -25,10 +25,12 @@ Requires Ruby (see `.ruby-version`) and Bundler.
 
 ## Vendored libraries
 
-| Library      | Version |
-|--------------|---------|
-| Bootstrap (Sass port) | 3.4.1 |
-| Font Awesome | 4.7.0   |
-| jQuery       | 3.7.1   |
-| jQuery UI    | 1.13.3  |
-| jQuery Easing | 1.4.1  |
+| Library      | Version | Location |
+|--------------|---------|----------|
+| Bootstrap    | 5.3.8   | `_sass/bootstrap/`, `js/bootstrap.bundle.min.js` |
+| Font Awesome Free | 7.3.1 | `_sass/font-awesome/`, `fonts/fa-solid-900.woff2` |
+| Glyphicons Halflings (from Bootstrap 3.4.1) | — | `fonts/glyphicons-halflings-regular.*`, carousel arrows only |
+
+`_sass/_settings.scss` sets Bootstrap 5's variables to Bootstrap 3's metrics
+and `_sass/_custom.scss` restores the Bootstrap 3 styles the design depends
+on, so the site looks as it did under Bootstrap 3.

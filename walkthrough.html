@@ -8,10 +8,10 @@ title: Walkthrough
   <section id="walkthrough" class="content-section">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-10 offset-md-1">
           <h1 class="page-header">Walkthrough</h1>
         </div>
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-10 offset-md-1">
           <p>
             The following slide deck has been created based on a
             collection of cheesey orignal DEC <a href="#">test slides</a>
@@ -26,34 +26,34 @@ title: Walkthrough
         </div>
       </div>
       <div class="row">
-        <div class="col-md-10 col-md-offset-1">
-          <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
-            <div class="carousel-inner" role="listbox">
+        <div class="col-md-10 offset-md-1">
+          <div id="carousel-example-generic" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
               <!-- Slides -->
 {% for img in site.data.zk_wizardry %}
   {% if forloop.first %}
-              <div class="item active">
+              <div class="carousel-item active">
   {% else %}
-              <div class="item">
+              <div class="carousel-item">
   {% endif %}
-                <img src="{{ site.url }}/img/{{img.name}}" alt="">
+                <img class="img-fluid d-block" src="{{ site.url }}/img/{{img.name}}" alt="">
                 <div class="carousel-caption">{{ img.caption }}</div>
               </div>
 {% endfor  %}
             </div>
 
               <!-- Controls -->
-            <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-example-generic" data-bs-slide="prev">
               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-              <span class="sr-only">Previous</span>
-            </a>
-            <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carousel-example-generic" data-bs-slide="next">
               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-              <span class="sr-only">Next</span>
-            </a>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </div>
-        <div class="col-md-10 col-md-offset-1">
+        <div class="col-md-10 offset-md-1">
           <p>
             This walkthrough can also be downloaded as a
             <a href="{{ site.url }}/pdf/zk_wizardry.pdf" target="_blank">PDF document</a>

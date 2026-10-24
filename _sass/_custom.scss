@@ -83,6 +83,7 @@ a:focus {
 }
 
 .navbar-brand {
+    line-height: 20px;
     font-weight: 700;
 }
 
@@ -90,32 +91,58 @@ a:focus {
     outline: none;
 }
 
+// Font Awesome 7 draws this icon larger than Font Awesome 4 did
+.navbar-brand .fa-circle-play {
+    font-size: .857em;
+}
+
+.navbar-custom {
+    --bs-navbar-color: #{$light};
+    --bs-navbar-hover-color: #{$light};
+    --bs-navbar-active-color: #{$light};
+    --bs-navbar-brand-color: #{$light};
+    --bs-navbar-brand-hover-color: #{$light};
+}
+
 .navbar-custom a {
     color: $light;
 }
 
-.navbar-custom .nav li a {
+.navbar-custom .navbar-nav a {
     -webkit-transition: background .3s ease-in-out;
     -moz-transition: background .3s ease-in-out;
     transition: background .3s ease-in-out;
 }
 
-.navbar-custom .nav li a:hover,
-.navbar-custom .nav li a:focus,
-.navbar-custom .nav li.active {
+.navbar-custom .navbar-nav a:hover,
+.navbar-custom .navbar-nav a:focus,
+.navbar-custom .navbar-nav a.active {
     outline: none;
+    box-shadow: none;
     background-color: rgba(255,255,255,0.2);
 }
 
-.navbar-toggle {
+.navbar-custom .dropdown-menu {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
+.navbar-custom .dropdown-item {
+    color: var(--bs-dropdown-link-color);
+}
+
+.navbar-toggler {
     padding: 4px 6px;
+    border-color: transparent;
     font-size: 16px;
     color: $light;
 }
 
-.navbar-toggle:focus,
-.navbar-toggle:active {
+.navbar-toggler:focus,
+.navbar-toggler:active {
     outline: none;
+    box-shadow: none;
 }
 
 @media(min-width:767px) {
@@ -136,6 +163,38 @@ a:focus {
 
     .navbar-custom.top-nav-collapse {
         border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+}
+
+// Collapsed (phone) navbar, laid out as Bootstrap 3 did it
+
+@media(max-width:767.98px) {
+    .navbar-custom .navbar-collapse {
+        margin: 0 -15px;
+        padding: 0 15px;
+        border-top: 1px solid transparent;
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.1);
+    }
+
+    .navbar-custom .navbar-nav {
+        margin: 4px -15px;
+    }
+
+    .navbar-custom .nav-link {
+        padding: 10px 15px;
+        line-height: 20px;
+    }
+
+    .navbar-custom .dropdown-menu {
+        padding: 5px 0;
+        background-color: transparent;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .navbar-custom .dropdown-item {
+        padding: 5px 15px 5px 25px;
+        line-height: 20px;
     }
 }
 
@@ -204,6 +263,12 @@ a:focus {
     outline: none;
     color: $light;
     background: rgba(255,255,255,0.1);
+}
+
+// Font Awesome 7 draws this icon larger than Font Awesome 4 did
+.btn-circle .fa-angles-down {
+    font-size: .76em;
+    vertical-align: .1em;
 }
 
 .page-scroll .btn-circle i.animated {
@@ -397,4 +462,156 @@ body {
     bottom: 0;
     width: 100%;
     height: 60px;
+}
+
+// Bootstrap 3 styles that Bootstrap 5 dropped or changed
+
+.page-header {
+    padding-bottom: 9px;
+    margin: 40px 0 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.lead {
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+}
+
+@media(min-width:768px) {
+    .lead {
+        font-size: 21px;
+    }
+}
+
+ul,
+ol {
+    margin-bottom: 10px;
+    padding-left: 40px;
+}
+
+dl {
+    margin-bottom: 20px;
+}
+
+dd {
+    margin-bottom: 0;
+}
+
+pre {
+    padding: 9.5px;
+    margin: 0 0 10px;
+    font-size: 13px;
+    line-height: 1.428571429;
+    word-break: break-all;
+    word-wrap: break-word;
+    color: #333;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.btn-lg {
+    line-height: 1.3333333;
+}
+
+// Icons keep their natural width, as they did in Font Awesome 4
+:root {
+    --fa-width: auto;
+}
+
+// Carousel controls: shaded edges and Glyphicon chevrons, as in Bootstrap 3
+
+@font-face {
+    font-family: "Glyphicons Halflings";
+    src: url("../fonts/glyphicons-halflings-regular.woff2") format("woff2"),
+         url("../fonts/glyphicons-halflings-regular.woff") format("woff");
+}
+
+.glyphicon {
+    position: relative;
+    top: 1px;
+    display: inline-block;
+    font-family: "Glyphicons Halflings";
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.glyphicon-chevron-left::before {
+    content: "\e079";
+}
+
+.glyphicon-chevron-right::before {
+    content: "\e080";
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    display: block;
+    font-size: 20px;
+    text-shadow: 0 1px 2px rgba(0,0,0,.6);
+}
+
+.carousel-control-prev {
+    background-image: linear-gradient(to right, rgba(0,0,0,.5) 0, rgba(0,0,0,.0001) 100%);
+}
+
+.carousel-control-next {
+    background-image: linear-gradient(to right, rgba(0,0,0,.0001) 0, rgba(0,0,0,.5) 100%);
+}
+
+.carousel-control-prev .glyphicon,
+.carousel-control-next .glyphicon {
+    position: absolute;
+    top: 50%;
+    z-index: 5;
+    display: inline-block;
+    margin-top: -10px;
+}
+
+.carousel-control-prev .glyphicon {
+    left: 50%;
+    margin-left: -10px;
+}
+
+.carousel-control-next .glyphicon {
+    right: 50%;
+    margin-right: -10px;
+}
+
+@media screen and (min-width:768px) {
+    .carousel-control-prev .glyphicon,
+    .carousel-control-next .glyphicon {
+        width: 30px;
+        height: 30px;
+        margin-top: -10px;
+        font-size: 30px;
+    }
+
+    .carousel-control-prev .glyphicon {
+        margin-left: -10px;
+    }
+
+    .carousel-control-next .glyphicon {
+        margin-right: -10px;
+    }
+}
+
+// Below the md breakpoint every column is full width, so lay rows out as
+// plain blocks: vertical margins then collapse between columns as they did
+// with Bootstrap 3's (unfloated) columns.
+@media(max-width:991.98px) {
+    .row {
+        display: block;
+    }
+
+    .row::before,
+    .row::after {
+        content: " ";
+        display: table;
+    }
 }
