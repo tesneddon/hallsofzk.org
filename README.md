@@ -8,7 +8,7 @@ lives in [tesneddon/zk](https://github.com/tesneddon/zk).
 Requires Ruby (see `.ruby-version`) and Bundler.
 
     bundle install
-    bundle exec jekyll serve                         # http://localhost:8000
+    bundle exec jekyll serve                         # http://localhost:8080
     JEKYLL_ENV=production bundle exec jekyll build   # static site in _site/
 
 ## Layout
