@@ -23,7 +23,6 @@ html {
     h2 {
         margin-top: 10px;
     }
-    height: 100%;
 }
 
 // Typhography 
@@ -201,9 +200,11 @@ a:focus {
  // Full Page Image Intro Section 
 
  .intro {
-    display: table;
+    display: flex;
+    align-items: center;
     width: 100%;
-    height: auto;
+    min-height: 100vh;
+    min-height: 100svh;  // the visible screen on phones, without the browser bars
     padding: 100px 0;
     text-align: center;
     color: $light;
@@ -216,8 +217,7 @@ a:focus {
 }
 
 .intro-body {
-    display: table-cell;
-    vertical-align: middle;
+    width: 100%;
 }
 
 .brand-heading {
@@ -230,7 +230,6 @@ a:focus {
 
 @media(min-width:767px) {
     .intro {
-        height: 100%;
         padding: 0;
     }
 
@@ -337,7 +336,14 @@ a:focus {
     -o-background-size: cover;
 }
 
+// Fills the screen with the text centred, like the intro above it
 #next {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    min-height: 100svh;
+    padding-bottom: 50px;
     background: url(../assets/img/next-bg.jpg) no-repeat center center scroll;
     background-size: cover;
 }
@@ -562,6 +568,35 @@ dl.keys dd {
     padding-bottom: 50px;
 }
 
+// The map page: the floor plans are sheets of graph paper on the cubicles
+#plan {
+    background: linear-gradient(rgba(0, 0, 0, .65), rgba(0, 0, 0, .65)),
+                url(../assets/img/cubicles.jpg) no-repeat center center fixed;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 50px;
+
+    h4 {
+        margin: 50px 0 10px;
+    }
+
+    img {
+        box-shadow: 0 6px 24px rgba(0, 0, 0, .6);
+    }
+
+    .floors .btn {
+        margin: 0 8px 8px 0;
+    }
+
+    .note {
+        color: #f28cbc;
+    }
+
+    .item {
+        color: #7fd99a;
+    }
+}
+
 // Stays a flex row on narrow screens (see the .row rule at the end), so
 // the photos can sit two abreast on a phone
 #walkthrough .cheesy {
@@ -674,20 +709,9 @@ dl.keys dd {
     opacity: .6;
 }
 
-#map {
-    width: 100%;
-    height: 200px;
-    margin-top: 100px;
-}
-
 @media(min-width:767px) {
     .content-section {
         padding-top: $navbar-height;
-    }
-
-    #map {
-        height: 400px;
-        margin-top: 250px;
     }
 }
 

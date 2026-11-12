@@ -23,6 +23,7 @@ Requires Ruby (see `.ruby-version`) and Bundler.
 | `js/`, `fonts/` | Vendored libraries and site scripts                     |
 | `assets/img/`, `assets/pdf/` | Images and documents used by the site |
 | `assets/slides/` | Walkthrough slide deck; `tools/export_slides.py` exports it to `assets/img/` and `assets/pdf/` |
+| `tools/draw_map.py` | Draws the map page's floor plans (`assets/img/map_*.png`) from a checkout of the zk repository: `tools/draw_map.py ~/zk` |
 | `img/`          | Images not currently used on the site                   |
 
 ## Vendored libraries

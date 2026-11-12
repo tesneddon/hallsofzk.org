@@ -2,7 +2,7 @@ title:      The Halls of ZK
 baseurl:    ""
 
 exclude:    [ 'Gemfile', 'Gemfile.lock', '.ruby-version', 'README.md',
-              , 'tools/', ]
+              'tools/' ]
 
 sass:
   style: compressed
