@@ -8,19 +8,19 @@ title: Play
   <section id="play" class="content-section">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 offset-md-1">
+        <div class="col-md-12">
           <h1 class="page-header">Play</h1>
         </div>
-        <div class="col-md-10 offset-md-1">
+        <div class="col-md-12">
           <p>
             There are a number of ways to play The Halls of ZK, depending on
             whether you want to install the game on your own system or access it
-            online (even through a browser).
+            online (even through a browser or over the phone).
           </p>
         </div>
       </div>
       <div class="row">
-        <div class="col-md-6 offset-md-1">
+        <div class="col-md-7">
           <h4>Play Online</h4>
           <p>
             The Halls of ZK can be played online in a web browser by navigating
@@ -42,18 +42,18 @@ title: Play
             </a>.
           </p>
         </div>
-        <div class="col-md-4">
-          <img class="img-fluid" src="{{ site.utl }}/img/play.png">
+        <div class="col-md-5">
+          <img class="img-fluid" src="{{ site.baseurl }}/assets/img/play.png">
         </div>
-        <div class="col-md-9 offset-md-1">
+        <div class="col-md-12">
           <p>
             Alternatively, BENDER:: is connected to
-            <a href="http://www.update.uu.se/~bqt/hecnet.html" target="_blank">
+            <a href="http://mim.softjar.se" target="_blank">
               HECnet
             </a>, a world wide hobbyist DECnet Phase IV network.  If your node
             database is not up to date, then use the DECnet address 12.2 and log
             in as user ZK.  You can look the node details up
-            <a href="http://madame.update.uu.se/~bqt/nodedb?search=12.&field=2&sort=0"
+            <a href="http://mim.softjar.se/nodedb?search=bender&field=0&sort=0"
 	           target="_blank">
               here
             </a>.
@@ -61,44 +61,77 @@ title: Play
         </div>
       </div>
       <div class="row">
-        <div class="col-md-4 offset-md-1">
-          <img class="img-fluid d-block" src="{{ site.utl }}/img/source.png">
+        <div class="col-md-12 clearfix">
+          <h4 id="phone">Play by Phone</h4>
+          <img class="img-fluid wrap-left" src="{{ site.baseurl }}/assets/img/phone.png"
+               alt="Western Electric 2500 push-button telephone">
+          <p>
+            The Halls of ZK can be played over the telephone by calling
+            <a href="tel:+61861863484">+61 8 6186 3484</a>.  The game is read
+            aloud by
+            <a href="https://github.com/dectalk/dectalk" target="_blank">DECtalk</a>
+            and you play using your phone's keypad.
+          </p>
+          <p>
+            When asked for your passcode, new players press <kbd>#</kbd> and
+            then <kbd>1</kbd> to start a new game (or <kbd>2</kbd> to hear about
+            the game first).  You will be given a six digit passcode, read out
+            twice.  Keep it safe: it is how you get back to your saved game next
+            time you call.  The keypad and menu are described on the
+            <a href="{{ site.baseurl }}/commands.html#phone">Commands</a> page.
+          </p>
+          <p>
+            The game itself runs on OpenVMS VAX, just as it always has.  The
+            calls are answered by
+            <a href="https://www.asterisk.org" target="_blank">Asterisk</a>,
+            running on a small Linux box, which connects each caller to the VAX
+            using FastAGI.  The VAX sends the game's text and the Linux box
+            turns it into speech with DECtalk and plays it down the line, then
+            passes the caller's key presses back to the game.
+          </p>
         </div>
-        <div class="col-md-6">
+      </div>
+      <div class="row">
+        <div class="col-md-7">
           <h4>Play Locally</h4>
           <p>
-            Alternatively, if you would rather install ZK on your local VAX, Alpha
-            or I64 OpenVMS system, the individual software packages can be
+            Alternatively, if you would rather install ZK on your local VAX, Alpha,
+            I64 or x86-64 OpenVMS system, the individual software packages can be
             downloaded below:
           </p>
-          <style type="text/css">
-            dt { float: left; width: 30px; }
-          </style>
-          <dl>
-            <dt><a href="ftp://ftp.hallsofzk.org/pub/zk/zk011-a.zip">A</a>
+          <dl class="keys">
+            <dt><a href="ftp://ftp.hallsofzk.org/pub/zk/zk011-a.zip">ZK011-A.ZIP</a></dt>
             <dd>VMSINSTAL kit</dd>
-            <dt><a href="ftp://ftp.hallsofzk.org/pub/zk/zk011-b.zip">B</a>
-            <dd>OpenVMS VAX Images</dd>
-            <dt><a href="ftp://ftp.hallsofzk.org/pub/zk/zk011-c.zip">C</a>
-            <dd>OpenVMS Alpha Images</dd>
-            <dt><a href="ftp://ftp.hallsofzk.org/pub/zk/zk011-d.zip">D</a>
-            <dd>OpenVMS I64 Images</dd>
+            <dt><a href="ftp://ftp.hallsofzk.org/pub/zk/zk011-b.zip">ZK011-B.ZIP</a></dt>
+            <dd>OpenVMS VAX images</dd>
+            <dt><a href="ftp://ftp.hallsofzk.org/pub/zk/zk011-c.zip">ZK011-C.ZIP</a></dt>
+            <dd>OpenVMS Alpha images</dd>
+            <dt><a href="ftp://ftp.hallsofzk.org/pub/zk/zk011-d.zip">ZK011-D.ZIP</a></dt>
+            <dd>OpenVMS I64 images</dd>
+            <dt><a href="ftp://ftp.hallsofzk.org/pub/zk/zk011-d.zip">ZK011-E.ZIP</a></dt>
+            <dd>OpenVMS x86-64 images</dd>
           </dl>
           <p>
-          Alternatively a zip file containing all parts of the kit is available
-          <a href="ftp://ftp.hallsofzk.org/pub/zk/zk011.zip">here</a>.
+            Alternatively, all parts of the kit are available in a single zip
+            file,
+            <a href="ftp://ftp.hallsofzk.org/pub/zk/zk011.zip">ZK013.ZIP</a>.
           </p>
         </div>
-        <div class="col-md-10 offset-md-1">
+        <div class="col-md-5">
+          <img class="img-fluid d-block" alt="VMS V1.5 master source tape" src="{{ site.baseurl }}/assets/img/source.png">
+        </div>
+        <div class="col-md-12">
           <p>
-            The complete source code can be downloaded from the Github project
-            page <a href="https://github.com/tesneddon/zk">here</a>.
+            The complete source code can be downloaded from the
+            <a href="https://github.com/tesneddon/zk" target="_blank">GitHub
+            project page</a>.
           </p>
           <p>
             Although ZK is shipped as a VMSINSTAL kit, it can be extracted from
-            the relevant, architecture specific savset and run without installing
-            system-wide.  To do this, execute the following commands:
-          <pre>
+            the relevant, architecture specific saveset and run without
+            installing system-wide.  To do this, execute the following commands:
+          </p>
+          <pre class="terminal">
 $ VERSION = "011"
 $ ARCH_TYPE = F$GETSYI("ARCH_TYPE")
 $ ARCH_EXTN = F$ELEMENT(ARCH_TYPE,",",",B,C,D") - ","
@@ -107,6 +140,19 @@ $ COPY/FTP/ANONYMOUS/VERBOSE/LOG -
     SYS$DISK:[]
 $ BACKUP ZK'VERSION'.'ARCH_EXTN'/SAVE_SET []
 $ RUN ZK$MAIN.EXE</pre>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <h4 id="problems">Reporting Problems</h4>
+          <p>
+            Found a bug in the game, a problem with the phone or online
+            versions, or a mistake on this website?  Please check the
+            <a href="https://github.com/tesneddon/zk/issues" target="_blank">ZK
+            issues page on GitHub</a> to see whether it has already been
+            reported, and if not, open a new issue.  It helps to say which
+            version you were playing (terminal, online or phone), where you
+            were in the game and what you did just before it went wrong.
           </p>
         </div>
       </div>

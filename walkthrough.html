@@ -8,61 +8,140 @@ title: Walkthrough
   <section id="walkthrough" class="content-section">
     <div class="container">
       <div class="row">
-        <div class="col-md-10 offset-md-1">
+        <div class="col-md-12">
           <h1 class="page-header">Walkthrough</h1>
         </div>
-        <div class="col-md-10 offset-md-1">
+        <div class="col-md-12">
           <p>
             The following slide deck has been created based on a
-            collection of cheesey orignal DEC <a href="#">test slides</a>
+            collection of cheesy original DEC <a href="#cheesy">test slides</a>
             and the
-            <a href="https://github.com/tesneddon/zk/blob/master/zk/wizardry.txt" target="_blank">
-              WIZARDRY.TXT</a>
-            that shipped with the original source code.  While the guide
-            is not step-by-step in all cases, it does suck a lot of the
-            magic out of it.  So, hopefully you're only here because
-            you're stuck.
+            <a href="https://github.com/tesneddon/zk/blob/master/zk/wizardry.txt" target="_blank">walkthrough</a>
+            supplied by <a href="https://github.com/bchiha" target="_blank">@bchiha</a>.
           </p>
         </div>
-      </div>
-      <div class="row">
-        <div class="col-md-10 offset-md-1">
-          <div id="carousel-example-generic" class="carousel slide" data-bs-ride="carousel">
+        <div class="col-lg-10 offset-lg-1">
+          <div id="slides" class="carousel slide" data-bs-interval="false" data-bs-touch="true">
             <div class="carousel-inner">
-              <!-- Slides -->
 {% for img in site.data.zk_wizardry %}
-  {% if forloop.first %}
-              <div class="carousel-item active">
-  {% else %}
-              <div class="carousel-item">
-  {% endif %}
-                <img class="img-fluid d-block" src="{{ site.url }}/img/{{img.name}}" alt="">
-                <div class="carousel-caption">{{ img.caption }}</div>
+              <div class="carousel-item{% if forloop.first %} active{% endif %}">
+                <img class="img-fluid d-block w-100" src="{{ site.baseurl }}/assets/img/{{ img.name }}" alt="{{ img.alt }}"
+                     {% unless forloop.first %}loading="lazy"{% endunless %}>
+                <p class="slide-title">
+                  <span class="slide-count">{{ forloop.index }} / {{ forloop.length }}</span>
+                  {{ img.alt }}
+                </p>
               </div>
-{% endfor  %}
+{% endfor %}
             </div>
-
-              <!-- Controls -->
-            <button class="carousel-control-prev" type="button" data-bs-target="#carousel-example-generic" data-bs-slide="prev">
-              <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <button class="carousel-control-prev" type="button" data-bs-target="#slides" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Previous</span>
             </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carousel-example-generic" data-bs-slide="next">
-              <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <button class="carousel-control-next" type="button" data-bs-target="#slides" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
               <span class="visually-hidden">Next</span>
             </button>
           </div>
-        </div>
-        <div class="col-md-10 offset-md-1">
-          <p>
-            This walkthrough can also be downloaded as a
-            <a href="{{ site.url }}/pdf/zk_wizardry.pdf" target="_blank">PDF document</a>
-            or in the original
-            <a href="https://github.com/tesneddon/zk/raw/master/zk/wizardry.txt" target="_blank">
-            ASCII text</a>
-            format.
+          <p class="downloads">
+            <a class="btn btn-outline-light" href="{{ site.baseurl }}/assets/pdf/zk_wizardry.pdf" target="_blank">
+              <i class="fa-solid fa-file-pdf"></i> PDF</a>
+            <a class="btn btn-outline-light" href="{{ site.baseurl }}/assets/slides/zk_walkthrough.odp">
+              <i class="fa-solid fa-download"></i> Slides (ODP)</a>
+            <a class="btn btn-outline-light" href="https://github.com/tesneddon/zk/raw/master/zk/wizardry.txt" target="_blank">
+              <i class="fa-solid fa-file-lines"></i> WIZARDRY.TXT</a>
           </p>
+        </div>
+      </div>
+      <div class="row cheesy">
+        <div class="col-md-12">
+          <h4 id="cheesy">The Original Slides</h4>
+          <p>
+            The look of the walkthrough comes from a box of genuine 35mm
+            slides from Digital's own presentations, complete with the
+            gradients, flying shapes and earnest bullet points of the day.
+            Here are a few of them, photographed just as they were found.
+          </p>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="{{ site.baseurl }}/assets/img/cheesy1.jpg" data-bs-toggle="modal" data-bs-target="#viewer">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/img/cheesy1.jpg"
+                 alt="The Challenge to State and Local Government" loading="lazy">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="{{ site.baseurl }}/assets/img/cheesy2.jpg" data-bs-toggle="modal" data-bs-target="#viewer">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/img/cheesy2.jpg"
+                 alt="Meeting the Information Challenge: Distributed Data Processing" loading="lazy">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="{{ site.baseurl }}/assets/img/cheesy3.jpg" data-bs-toggle="modal" data-bs-target="#viewer">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/img/cheesy3.jpg"
+                 alt="The Challenge of Services: New Computing Applications" loading="lazy">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="{{ site.baseurl }}/assets/img/cheesy4.jpg" data-bs-toggle="modal" data-bs-target="#viewer">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/img/cheesy4.jpg"
+                 alt="The New Idea Strategy Statement" loading="lazy">
+          </a>
+        </div>
+        <div class="col-6 col-md-4">
+          <a href="{{ site.baseurl }}/assets/img/cheesy5.jpg" data-bs-toggle="modal" data-bs-target="#viewer">
+            <img class="img-fluid" src="{{ site.baseurl }}/assets/img/cheesy5.jpg"
+                 alt="Deliverables" loading="lazy">
+          </a>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- The original slides open here, over the page -->
+  <div class="modal fade" id="viewer" tabindex="-1" aria-labelledby="viewer-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="viewer-title"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="img-fluid d-block mx-auto" alt="">
+          <button type="button" class="viewer-prev" aria-label="Previous slide">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="viewer-next" aria-label="Next slide">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var viewer = document.getElementById('viewer');
+      var links = Array.prototype.slice.call(document.querySelectorAll('.cheesy a'));
+      var image = viewer.querySelector('.modal-body img');
+      var title = viewer.querySelector('.modal-title');
+      var current = 0;
+
+      function show(i) {
+        current = (i + links.length) % links.length;
+        var thumb = links[current].querySelector('img');
+        image.src = links[current].getAttribute('href');
+        image.alt = thumb.alt;
+        title.textContent = thumb.alt + ' (' + (current + 1) + ' / ' + links.length + ')';
+      }
+
+      viewer.addEventListener('show.bs.modal', function(event) {
+        show(links.indexOf(event.relatedTarget));
+      });
+      viewer.querySelector('.viewer-prev').addEventListener('click', function() { show(current - 1); });
+      viewer.querySelector('.viewer-next').addEventListener('click', function() { show(current + 1); });
+      viewer.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') show(current - 1);
+        if (event.key === 'ArrowRight') show(current + 1);
+      });
+    })();
+  </script>

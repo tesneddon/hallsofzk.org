@@ -42,3 +42,15 @@ document.querySelectorAll('.page-scroll a[href^="#"]').forEach(function(anchor) 
         event.preventDefault();
     });
 });
+
+//Back to the top: shown once the page has scrolled a screen's worth
+var backToTop = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', function() {
+    backToTop.classList.toggle('show', window.scrollY > window.innerHeight / 2);
+});
+
+backToTop.addEventListener('click', function(event) {
+    scrollToY(0, 800);
+    event.preventDefault();
+});

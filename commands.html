@@ -1,0 +1,194 @@
+---
+
+layout: default
+title: Commands
+
+---
+
+  <section id="commands" class="content-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="page-header">Commands</h1>
+        </div>
+        <div class="col-md-12">
+          <p>
+            At a terminal you play The Halls of ZK by typing commands in
+            plain English at the prompt.  Over the
+            <a href="#phone">telephone</a> the same game is played with
+            your phone's keypad.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h4 id="terminal">At the Terminal</h4>
+          <p>
+            Commands can be strung together with full stops or
+            <kbd>THEN</kbd>, and several objects can be named at once with
+            <kbd>AND</kbd>.  <kbd>THE</kbd> is optional.
+          </p>
+          <pre class="terminal">
+GET SACK AND LAMP
+E. N. LOOK
+<i>command</i> THEN <i>command</i> THEN <i>command</i>
+TAKE <i>object</i> FROM <i>object</i></pre>
+        </div>
+        <div class="col-md-6">
+          <h5>Moving Around</h5>
+          <dl class="keys">
+            <dt><kbd>N</kbd> <kbd>S</kbd> <kbd>E</kbd> <kbd>W</kbd></dt>
+            <dd>North, south, east and west; spelt out in full works too</dd>
+            <dt><kbd>NE</kbd> <kbd>NW</kbd> <kbd>SE</kbd> <kbd>SW</kbd></dt>
+            <dd>Or <kbd>NORTH EAST</kbd>, <kbd>SOUTH WEST</kbd> and so on</dd>
+            <dt><kbd>U</kbd> <kbd>D</kbd></dt>
+            <dd>Up and down</dd>
+            <dt><kbd>IN</kbd> <kbd>OUT</kbd></dt>
+            <dd>Also <kbd>ENTER</kbd> and <kbd>EXIT</kbd> or <kbd>LEAVE</kbd></dd>
+            <dt><kbd>BACK</kbd></dt>
+            <dd>Go back</dd>
+            <dt><kbd>GO</kbd> <i>direction</i></dt>
+            <dd>Also <kbd>WALK</kbd> or <kbd>RUN</kbd></dd>
+          </dl>
+        </div>
+        <div class="col-md-6">
+          <h5>The Game</h5>
+          <dl class="keys">
+            <dt><kbd>LOOK</kbd></dt>
+            <dd>Describe where you are</dd>
+            <dt><kbd>INVENTORY</kbd></dt>
+            <dd>List what you are carrying</dd>
+            <dt><kbd>SCORE</kbd></dt>
+            <dd>Your score so far</dd>
+            <dt><kbd>BRIEF</kbd> <kbd>VERBOSE</kbd></dt>
+            <dd>Short or full room descriptions; <kbd>QUIET</kbd> is the same as <kbd>BRIEF</kbd></dd>
+            <dt><kbd>SAVE</kbd> <kbd>RESTORE</kbd></dt>
+            <dd>Save your game, or pick up a saved one</dd>
+            <dt><kbd>RESTART</kbd></dt>
+            <dd>Start again from the beginning</dd>
+            <dt><kbd>QUIT</kbd></dt>
+            <dd>Leave the game; <kbd>Ctrl/Z</kbd> does the same</dd>
+            <dt><kbd>VERSION</kbd></dt>
+            <dd>Which version of ZK this is</dd>
+          </dl>
+        </div>
+        <div class="col-md-12">
+          <h5>Doing Things</h5>
+          <p>
+            Most commands act on an <i>object</i>: something in the room,
+            something you carry, or someone you meet.  Words separated by
+            a slash mean the same thing.
+          </p>
+          <ul class="verbs">
+            <li>GET/TAKE/REMOVE <i>object</i></li>
+            <li>DROP <i>object</i></li>
+            <li>EXAMINE <i>object</i></li>
+            <li>READ <i>object</i></li>
+            <li>INVENTORY <i>object</i></li>
+            <li>LOCATE <i>object</i>, WHERE IS <i>object</i></li>
+            <li>LOOK AT <i>object</i></li>
+            <li>LOOK IN <i>object</i></li>
+            <li>PICK UP <i>object</i></li>
+            <li>PUT DOWN <i>object</i></li>
+            <li>WEAR <i>object</i></li>
+            <li>PUT ON <i>object</i></li>
+            <li>OPEN <i>object</i> [WITH <i>object</i>]</li>
+            <li>CLOSE/SHUT <i>object</i> [WITH <i>object</i>]</li>
+            <li>LOCK <i>object</i> [WITH <i>object</i>]</li>
+            <li>UNLOCK <i>object</i> [WITH <i>object</i>]</li>
+            <li>LIGHT/START <i>object</i> [WITH <i>object</i>]</li>
+            <li>STOP <i>object</i> [WITH <i>object</i>]</li>
+            <li>TURN ON/OFF <i>object</i></li>
+            <li>SHUT OFF <i>object</i></li>
+            <li>PUSH/PULL/MOVE <i>object</i> [<i>direction</i>]</li>
+            <li>PUT/MOUNT <i>object</i> IN/ON <i>object</i></li>
+            <li>GIVE <i>object</i> TO <i>object</i></li>
+            <li>BOOT <i>object</i></li>
+            <li>INSTALL <i>object</i></li>
+            <li>BOARD <i>object</i></li>
+            <li>DISEMBARK/DISMOUNT <i>object</i></li>
+            <li>GET ON/OFF <i>object</i></li>
+            <li>STEP ON/OFF <i>object</i></li>
+            <li>STAND ON <i>object</i></li>
+            <li>FOLLOW <i>object</i></li>
+            <li>SHAKE/WAVE <i>object</i></li>
+            <li>PLAY WITH <i>object</i></li>
+            <li>RUB/FONDLE <i>object</i> [WITH <i>object</i>]</li>
+            <li>CURE/HEAL/REPAIR/FIX <i>object</i> [WITH <i>object</i>]</li>
+            <li>DESTROY/BREAK/KILL/SMASH/MUNG <i>object</i> [WITH <i>object</i>]</li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <h5>Talking and Typing</h5>
+          <dl class="keys">
+            <dt><kbd>SAY</kbd> <i>words</i></dt>
+            <dd>Say something out loud</dd>
+            <dt><kbd>TELL</kbd> <i>someone</i>, <i>command</i></dt>
+            <dd>Ask someone to do something; <kbd>ASK</kbd> works too</dd>
+            <dt><kbd>TYPE</kbd> <i>digits</i></dt>
+            <dd>Type a number</dd>
+            <dt><kbd>LOOK UP</kbd> "<i>text</i>"</dt>
+            <dd>Look up a word or name</dd>
+            <dt><kbd>HELLO</kbd></dt>
+            <dd>Be friendly</dd>
+          </dl>
+        </div>
+        <div class="col-md-6">
+          <h5>And the Rest</h5>
+          <p>
+            <kbd>JUMP</kbd>, <kbd>SCREAM</kbd>, <kbd>WAIT</kbd> and
+            <kbd>PRAY</kbd> are all understood, as are a couple of magic
+            words that adventurers of a certain age will remember.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12">
+          <h4 id="phone">On the Telephone</h4>
+          <p>
+            Over the <a href="{{ site.baseurl }}/play.html#phone">phone</a>
+            there is nothing to type.  The game reads each room aloud and you
+            answer with your phone's keypad.
+          </p>
+        </div>
+        <div class="col-md-5">
+          <p>
+            In a room, the keypad is a compass:
+          </p>
+          <table class="table table-bordered text-center keypad">
+            <tr><td><kbd>1</kbd><br>NW</td><td><kbd>2</kbd><br>N</td><td><kbd>3</kbd><br>NE</td></tr>
+            <tr><td><kbd>4</kbd><br>W</td><td><kbd>5</kbd><br>Look</td><td><kbd>6</kbd><br>E</td></tr>
+            <tr><td><kbd>7</kbd><br>SW</td><td><kbd>8</kbd><br>S</td><td><kbd>9</kbd><br>SE</td></tr>
+            <tr><td><kbd>*</kbd><br>&nbsp;</td><td><kbd>0</kbd><br>Menu</td><td><kbd>#</kbd><br>Exits</td></tr>
+          </table>
+        </div>
+        <div class="col-md-7">
+          <p>
+            Press <kbd>0</kbd> for the menu:
+          </p>
+          <dl class="keys">
+            <dt><kbd>1</kbd></dt>
+            <dd>Objects here: pick one, then take, examine, open and so on</dd>
+            <dt><kbd>2</kbd></dt>
+            <dd>Go up, where you can</dd>
+            <dt><kbd>3</kbd></dt>
+            <dd>Inventory: pick an object you carry to use it</dd>
+            <dt><kbd>4</kbd></dt>
+            <dd>Score</dd>
+            <dt><kbd>5</kbd> / <kbd>6</kbd></dt>
+            <dd>Save / restore your game</dd>
+            <dt><kbd>7</kbd></dt>
+            <dd>Quit</dd>
+            <dt><kbd>8</kbd></dt>
+            <dd>Go down, where you can</dd>
+            <dt><kbd>9</kbd></dt>
+            <dd>Help</dd>
+            <dt><kbd>*</kbd></dt>
+            <dd>Back to the game</dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -9,7 +9,4 @@ vendor/
 # Local scratch/reference material
 tmp/
 
-# Large reference PDFs (not served; _* is excluded by Jekyll)
-_pdf/
-
 .DS_Store

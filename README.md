@@ -21,7 +21,9 @@ Requires Ruby (see `.ruby-version`) and Bundler.
 | `_sass/`        | Site styles (`_settings.scss`, `_custom.scss`) and vendored Bootstrap / Font Awesome sources |
 | `css/styles.scss` | Stylesheet entry point, compiled by Jekyll            |
 | `js/`, `fonts/` | Vendored libraries and site scripts                     |
-| `img/`          | Images                                                  |
+| `assets/img/`, `assets/pdf/` | Images and documents used by the site |
+| `assets/slides/` | Walkthrough slide deck; `tools/export_slides.py` exports it to `assets/img/` and `assets/pdf/` |
+| `img/`          | Images not currently used on the site                   |
 
 ## Vendored libraries
 

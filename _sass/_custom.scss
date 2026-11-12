@@ -207,7 +207,7 @@ a:focus {
     padding: 100px 0;
     text-align: center;
     color: $light;
-    background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+    background: url(../assets/img/intro-bg.jpg) no-repeat bottom center scroll;
     background-color: $dark;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -338,29 +338,340 @@ a:focus {
 }
 
 #next {
-    background: url(../img/next-bg.jpg) no-repeat center center scroll;
+    background: url(../assets/img/next-bg.jpg) no-repeat center center scroll;
     background-size: cover;
+}
+
+#about {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+                url(../assets/img/about-bg.jpg) no-repeat center center scroll;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 30px;
+}
+
+// A picture the text flows around, beside it on wider screens
+.wrap-left {
+    display: block;
+    margin: 0 auto 20px;
+}
+
+@media(min-width:768px) {
+    .wrap-left {
+        float: left;
+        width: 327px;
+        margin: 0 40px 20px 0;
+    }
+}
+
+// The story flows down two columns on wide screens, one on narrow ones
+#about .story {
+    columns: 2 24em;
+    column-gap: 50px;
+    margin-bottom: -25px;  // takes back the last paragraph's padding
+}
+
+// Spacing as padding, not margin: Safari carries the margin of the last
+// item in a column over to the top of the next, so the tops don't line up
+#about .story p {
+    break-inside: avoid;
+    margin-bottom: 0;
+    padding-bottom: 25px;
+}
+
+@media(min-width:767px) {
+    #about .story {
+        margin-bottom: -35px;
+    }
+
+    #about .story p {
+        padding-bottom: 35px;
+    }
+}
+
+#about ul.credits {
+    columns: 2 22em;
+    column-gap: 50px;
+    margin-bottom: 35px;
+}
+
+#about ul.credits li {
+    break-inside: avoid;
+    margin-bottom: 0;
+    padding-bottom: .5em;
+}
+
+#about .thanks {
+    padding: 15px 20px;
+    border-left: 4px solid $primary;
+    background-color: rgba(255, 255, 255, .08);
 }
 
 #play {
-    background: url(../img/play-bg.jpg) no-repeat center center scroll;
+    background: url(../assets/img/play-bg.jpg) no-repeat center center scroll;
     background-size: cover;
+}
+
+#commands {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+                url(../assets/img/commands-bg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    padding-bottom: 30px;
+}
+
+#commands h4 {
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+#commands h5 {
+    margin: 10px 0 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+pre.terminal {
+    overflow-x: auto;
+    word-break: normal;
+    word-wrap: normal;
+    margin-bottom: 35px;
+    padding: 15px 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #33ff66;
+    background-color: rgba(0, 0, 0, .6);
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+}
+
+pre.terminal i {
+    color: rgba(255, 255, 255, .7);
+}
+
+dl.keys {
+    margin-bottom: 35px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+#commands ul.verbs {
+    columns: 2 22em;
+    column-gap: 30px;
+    margin-bottom: 35px;
+    padding: 15px 20px;
+    list-style: none;
+    font-family: SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 15px;
+    line-height: 1.7;
+    color: #33ff66;
+    background-color: rgba(0, 0, 0, .6);
+    border: 1px solid rgba(255, 255, 255, .2);
+    border-radius: 4px;
+}
+
+#commands ul.verbs li {
+    margin: 0;
+    break-inside: avoid;
+}
+
+#commands ul.verbs i {
+    color: rgba(255, 255, 255, .7);
+}
+
+#commands .keypad {
+    --bs-table-bg: transparent;
+    --bs-table-color: inherit;
+    --bs-table-border-color: rgba(255, 255, 255, .3);
+    width: auto;
+    margin-bottom: 30px;
+}
+
+#commands .keypad td {
+    width: 4.5em;
+}
+
+dl.keys {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 4px 12px;
+    align-items: baseline;
+}
+
+dl.keys dt,
+dl.keys dd {
+    float: none;
+    width: auto;
+    margin: 0;
+    white-space: nowrap;
+}
+
+dl.keys dd {
+    white-space: normal;
 }
 
 #barcode {
-    background: url(../img/barcode-bg.jpg) no-repeat center center scroll;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+                url(../assets/img/barcode-bg.jpg) no-repeat center center scroll;
     background-size: cover;
+}
+
+#barcode pre.barcode-text,
+#walkway pre.barcode-text {
+    font-family: monospace;
+    text-align: center;
+    font-size: x-large;
 }
 
 #walkway {
-    background: url(../img/walkway-bg.jpg) no-repeat center center scroll;
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+                url(../assets/img/walkway-bg.jpg) no-repeat center center scroll;
     background-size: cover;
 }
 
-#walkthrough {
-    background: url(../img/walkthrough-bg.jpg) no-repeat center center scroll;
+// Fixed, so the one photo runs on behind both sections of the page
+#books,
+#links {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+                url(../assets/img/npp.jpg) no-repeat center center fixed;
     background-size: cover;
-    height: 100%;
+    min-height: 50vh;
+    padding-bottom: 30px;
+}
+
+.content-section ul {
+    font-size: 18px;
+    line-height: 1.5;
+}
+
+.content-section li {
+    margin-bottom: .5em;
+}
+
+@media(min-width:767px) {
+    .content-section ul {
+        font-size: 20px;
+        line-height: 1.6;
+    }
+}
+
+#walkthrough {
+    background: linear-gradient(rgba(0, 0, 0, .6), rgba(0, 0, 0, .6)),
+                url(../assets/img/walkthrough-bg.jpg) no-repeat center center scroll;
+    background-size: cover;
+    min-height: 100vh;
+    padding-bottom: 50px;
+}
+
+// Stays a flex row on narrow screens (see the .row rule at the end), so
+// the photos can sit two abreast on a phone
+#walkthrough .cheesy {
+    display: flex;
+    margin-top: 40px;
+}
+
+#walkthrough .cheesy img {
+    margin-bottom: 24px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 4px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, .6);
+    transition: transform .2s;
+}
+
+#walkthrough .cheesy a:hover img {
+    transform: scale(1.03);
+}
+
+// The pop-up viewer for the original slides
+#viewer .modal-content {
+    color: $light;
+    background-color: #000;
+    border: 1px solid rgba(255, 255, 255, .3);
+}
+
+#viewer .modal-header {
+    border-bottom-color: rgba(255, 255, 255, .2);
+}
+
+#viewer .modal-title {
+    font-size: 16px;
+}
+
+#viewer .modal-body {
+    position: relative;
+    padding: 0;
+}
+
+#viewer .modal-body img {
+    max-height: 80vh;
+}
+
+#viewer .viewer-prev,
+#viewer .viewer-next {
+    position: absolute;
+    top: 50%;
+    width: 44px;
+    height: 44px;
+    margin-top: -22px;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .6);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 50%;
+}
+
+#viewer .viewer-prev {
+    left: 12px;
+}
+
+#viewer .viewer-next {
+    right: 12px;
+}
+
+#viewer .viewer-prev:hover,
+#viewer .viewer-next:hover {
+    background-color: $primary;
+}
+
+#walkthrough .downloads {
+    margin-top: 20px;
+}
+
+#walkthrough .downloads .btn {
+    margin: 0 6px 8px 0;
+}
+
+#walkthrough .carousel {
+    margin-top: 10px;
+    border: 1px solid rgba(255, 255, 255, .3);
+    border-radius: 6px;
+    overflow: hidden;
+    background-color: #000;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .6);
+}
+
+// The controls sit over the slide only, not the title bar beneath it
+#walkthrough .carousel-control-prev,
+#walkthrough .carousel-control-next {
+    bottom: 3em;
+    width: 10%;
+}
+
+#walkthrough .slide-title {
+    margin: 0;
+    padding: .6em 1em;
+    font-size: 16px;
+    line-height: 1.8em;
+    background-color: rgba(255, 255, 255, .08);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#walkthrough .slide-count {
+    display: inline-block;
+    min-width: 4em;
+    margin-right: .5em;
+    opacity: .6;
 }
 
 #map {
@@ -458,11 +769,41 @@ body {
     webkit-tap-highlight-color: rgba(255,255,255,0.2);
 }
 
-.footer {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
+.back-to-top {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 1030;
+    width: 46px;
+    height: 46px;
+    line-height: 44px;
+    text-align: center;
+    font-size: 18px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, .7);
+    border: 1px solid rgba(255, 255, 255, .5);
+    border-radius: 50%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity .3s, visibility .3s, background-color .2s;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover,
+.back-to-top:focus {
+    color: #fff;
+    background-color: $primary;
+}
+
+// Keys: a black box with a faint edge, so it shows on dark photos too
+kbd {
+    color: #fff;
+    background-color: #000;
+    border: 1px solid rgba(255, 255, 255, .35);
 }
 
 // Bootstrap 3 styles that Bootstrap 5 dropped or changed

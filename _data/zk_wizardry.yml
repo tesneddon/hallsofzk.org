@@ -1,9 +1,44 @@
-- name: zk_wizardryjpg_Page1.jpg
-- name: zk_wizardryjpg_Page2.jpg
-- name: zk_wizardryjpg_Page3.jpg
-- name: zk_wizardryjpg_Page4.jpg
-- name: zk_wizardryjpg_Page5.jpg
-- name: zk_wizardryjpg_Page6.jpg
-- name: zk_wizardryjpg_Page7.jpg
-- name: zk_wizardryjpg_Page8.jpg
-- name: zk_wizardryjpg_Page9.jpg
+- name: zk_walkthrough_01.jpg
+  alt: "Wizardry Guide"
+- name: zk_walkthrough_02.jpg
+  alt: "To Win (175 points)"
+- name: zk_walkthrough_03.jpg
+  alt: "Before You Start"
+- name: zk_walkthrough_04.jpg
+  alt: "Before You Start (continued)"
+- name: zk_walkthrough_05.jpg
+  alt: "Part 1: Into the Building (25 points)"
+- name: zk_walkthrough_06.jpg
+  alt: "Part 2: Physical and Badge (25 points)"
+- name: zk_walkthrough_07.jpg
+  alt: "Part 3: Keys and Elevator"
+- name: zk_walkthrough_08.jpg
+  alt: "Part 3: Crystal Balls"
+- name: zk_walkthrough_09.jpg
+  alt: "Part 4: The System Disk"
+- name: zk_walkthrough_10.jpg
+  alt: "Part 5: The Petty Cash Safe (10 points)"
+- name: zk_walkthrough_11.jpg
+  alt: "Part 6: The CDD Tape (15 points)"
+- name: zk_walkthrough_12.jpg
+  alt: "Part 7: Moving the Documentation"
+- name: zk_walkthrough_13.jpg
+  alt: "Part 7: The DTR Tape (25 points)"
+- name: zk_walkthrough_14.jpg
+  alt: "Part 8: The Card"
+- name: zk_walkthrough_15.jpg
+  alt: "Part 8: The VMS Tape (25 points)"
+- name: zk_walkthrough_16.jpg
+  alt: "Part 9: Boot the VAX"
+- name: zk_walkthrough_17.jpg
+  alt: "Part 9: Install the Tapes (25 points)"
+- name: zk_walkthrough_18.jpg
+  alt: "Part 10: The Exit Interview (25 points)"
+- name: zk_walkthrough_19.jpg
+  alt: "Part 10: The Answers"
+- name: zk_walkthrough_20.jpg
+  alt: "Part 11: Escape and Win"
+- name: zk_walkthrough_21.jpg
+  alt: "Points"
+- name: zk_walkthrough_22.jpg
+  alt: "Ways to Die"
