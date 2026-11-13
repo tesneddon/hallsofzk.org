@@ -985,3 +985,19 @@ pre {
         display: table;
     }
 }
+
+// Footer: small print under every page
+
+.site-footer {
+    padding: 30px 0;
+    text-align: center;
+    color: rgba(255, 255, 255, .6);
+    background-color: $dark;
+    border-top: 1px solid rgba(255, 255, 255, .15);
+
+    p {
+        margin: 0 0 5px;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+}
