@@ -9,6 +9,7 @@
   Digital's logo, in Digital blue, drawn by `tools/make_icons.py`.
 - Rename `bootstrap.bundle.min.js` and two PDFs so every file name fits
   OpenVMS's ODS-2 file system: one dot, no spaces, 39 characters at most.
+- Replace the navbar's play icon with the zk logo.
 
 ## 2026-11-13
 

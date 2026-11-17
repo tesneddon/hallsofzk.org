@@ -90,9 +90,25 @@ a:focus {
     outline: none;
 }
 
-// Font Awesome 7 draws this icon larger than Font Awesome 4 did
-.navbar-brand .fa-circle-play {
-    font-size: .857em;
+// The zk logo: "z" and "k" in boxes, after Digital's logo, as in the favicon
+.zk-logo {
+    display: inline-flex;
+    gap: 2px;
+    margin-right: 4px;
+    vertical-align: 1px;
+}
+
+.zk-logo span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 15px;
+    height: 20px;
+    padding-bottom: 2px;
+    font: 700 15px/1 "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-transform: none;
+    color: #fff;
+    background-color: #1f3f8f;
 }
 
 .navbar-custom {
