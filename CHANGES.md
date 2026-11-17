@@ -7,6 +7,8 @@
 - Add an MIT license and this changelog.
 - Add a favicon and home screen icons: "z" and "k" in boxes after
   Digital's logo, in Digital blue, drawn by `tools/make_icons.py`.
+- Rename `bootstrap.bundle.min.js` and two PDFs so every file name fits
+  OpenVMS's ODS-2 file system: one dot, no spaces, 39 characters at most.
 
 ## 2026-11-13
 

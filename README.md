@@ -31,7 +31,7 @@ Requires Ruby (see `.ruby-version`) and Bundler.
 
 | Library      | Version | Location |
 |--------------|---------|----------|
-| Bootstrap    | 5.3.8   | `_sass/bootstrap/`, `js/bootstrap.bundle.min.js` |
+| Bootstrap    | 5.3.8   | `_sass/bootstrap/`, `js/bootstrap-bundle.js` (renamed from `bootstrap.bundle.min.js`) |
 | Font Awesome Free | 7.3.1 | `_sass/font-awesome/`, `fonts/fa-solid-900.woff2` |
 | Glyphicons Halflings (from Bootstrap 3.4.1) | — | `fonts/glyphicons-halflings-regular.*`, carousel arrows only |
 
