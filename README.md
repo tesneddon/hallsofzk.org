@@ -24,6 +24,7 @@ Requires Ruby (see `.ruby-version`) and Bundler.
 | `assets/img/`, `assets/pdf/` | Images and documents used by the site |
 | `assets/slides/` | Walkthrough slide deck; `tools/export_slides.py` exports it to `assets/img/` and `assets/pdf/` |
 | `tools/draw_map.py` | Draws the map page's floor plans (`assets/img/map_*.png`) from a checkout of the zk repository: `tools/draw_map.py ~/zk` |
+| `tools/make_icons.py` | Draws the favicon and home screen icons (`favicon.ico`, `apple-touch-icon*.png`): `tools/make_icons.py` |
 | `img/`          | Images not currently used on the site                   |
 
 ## Vendored libraries

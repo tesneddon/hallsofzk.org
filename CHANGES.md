@@ -5,6 +5,8 @@
 - Track Bootstrap's `vendor/_rfs.scss` partial, which `.gitignore` had been
   skipping, so the site builds from a fresh checkout.
 - Add an MIT license and this changelog.
+- Add a favicon and home screen icons: "z" and "k" in boxes after
+  Digital's logo, in Digital blue, drawn by `tools/make_icons.py`.
 
 ## 2026-11-13
 
