@@ -4,7 +4,7 @@ _site/
 .jekyll-metadata
 .sass-cache/
 .bundle/
-vendor/
+/vendor/
 
 # Local scratch/reference material
 tmp/
