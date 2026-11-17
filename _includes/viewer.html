@@ -1,0 +1,57 @@
+  <!-- Pictures open here, over the page.  Any link with
+       data-bs-toggle="modal" data-bs-target="#viewer" opens its href; the
+       title comes from data-title or the thumbnail's alt text, and an
+       optional data-caption (HTML) goes underneath. -->
+  <div class="modal fade" id="viewer" tabindex="-1" aria-labelledby="viewer-title" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="viewer-title"></h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <img class="img-fluid d-block mx-auto" alt="">
+          <button type="button" class="viewer-prev" aria-label="Previous picture">
+            <i class="fa-solid fa-chevron-left" aria-hidden="true"></i>
+          </button>
+          <button type="button" class="viewer-next" aria-label="Next picture">
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="modal-footer"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      var viewer = document.getElementById('viewer');
+      var links = Array.prototype.slice.call(document.querySelectorAll('a[data-bs-target="#viewer"]'));
+      var image = viewer.querySelector('.modal-body img');
+      var title = viewer.querySelector('.modal-title');
+      var footer = viewer.querySelector('.modal-footer');
+      var current = 0;
+
+      function show(i) {
+        current = (i + links.length) % links.length;
+        var link = links[current];
+        var name = link.getAttribute('data-title') || link.querySelector('img').alt;
+        image.src = link.getAttribute('href');
+        image.alt = link.querySelector('img').alt;
+        title.textContent = name + ' (' + (current + 1) + ' / ' + links.length + ')';
+        footer.innerHTML = link.getAttribute('data-caption') || '';
+        footer.hidden = !footer.innerHTML;
+        viewer.classList.toggle('captioned', !footer.hidden);
+      }
+
+      viewer.addEventListener('show.bs.modal', function(event) {
+        show(links.indexOf(event.relatedTarget));
+      });
+      viewer.querySelector('.viewer-prev').addEventListener('click', function() { show(current - 1); });
+      viewer.querySelector('.viewer-next').addEventListener('click', function() { show(current + 1); });
+      viewer.addEventListener('keydown', function(event) {
+        if (event.key === 'ArrowLeft') show(current - 1);
+        if (event.key === 'ArrowRight') show(current + 1);
+      });
+    })();
+  </script>

@@ -1,0 +1,54 @@
+---
+
+layout: default
+title: Photos
+
+---
+
+{% assign walk = site.data.photos | where: "taken", "2008-07-31" %}
+{% assign after = site.data.photos | where_exp: "p", "p.taken != '2008-07-31'" %}
+
+  <section id="photos" class="content-section photos">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="page-header">Photos</h1>
+          <p>
+            These photographs of ZKO were donated by various Zonker Kookies
+            and are kept in <a href="https://www.flickr.com/photos/tesneddon/albums/72157634383159373"
+            target="_blank">The Halls of ZK</a> album on Flickr.  Click on
+            any of them for a closer look.
+          </p>
+          <h4>ZKO, 31 July 2008</h4>
+          <p>
+            A walk through the labs, the twisty cubicles, the catwalks and the
+            grounds on one summer's day, as ZKO3 closed.
+          </p>
+        </div>
+      </div>
+      <div class="gallery">
+{% for photo in walk %}{% include photo.html photo=photo %}{% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section id="photos-after" class="content-section photos">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <h4>Before and After</h4>
+          <p>
+            The VAX/VMS development teams of the early days, and what became of
+            ZKO: the new barcode in the cafeteria and the buildings as Nashua
+            Technology Park on Innovative Way.  With thanks to Benn Schreiber,
+            Paul Koning and John J. Flatley Co.
+          </p>
+        </div>
+      </div>
+      <div class="gallery">
+{% for photo in after %}{% include photo.html photo=photo %}{% endfor %}
+      </div>
+    </div>
+  </section>
+
+{% include viewer.html %}

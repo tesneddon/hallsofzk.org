@@ -1,0 +1,6 @@
+{% assign photo = include.photo %}{% assign taken = photo.taken | date: "%-d %B %Y" %}{% if photo.title != "" %}{% assign name = photo.title %}{% else %}{% assign name = "ZKO, " | append: taken %}{% endif %}{% capture caption %}{% if photo.caption != "" %}<p>{{ photo.caption }}</p>{% endif %}<p class="viewer-meta">{{ taken }} &middot; <a href="{{ photo.flickr }}" target="_blank">View on Flickr</a></p>{% endcapture %}
+        <a href="{{ site.baseurl }}/assets/img/photos/{{ photo.id }}.jpg" data-bs-toggle="modal" data-bs-target="#viewer"
+           data-title="{{ name | escape }}" data-caption="{{ caption | escape }}">
+          <img src="{{ site.baseurl }}/assets/img/photos/small/{{ photo.id }}.jpg" alt="{{ name | escape }}"
+               width="400" height="300" loading="lazy">
+        </a>

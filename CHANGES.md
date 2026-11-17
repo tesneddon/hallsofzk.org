@@ -10,6 +10,10 @@
 - Rename `bootstrap.bundle.min.js` and two PDFs so every file name fits
   OpenVMS's ODS-2 file system: one dot, no spaces, 39 characters at most.
 - Replace the navbar's play icon with the zk logo.
+- Add a Photos page under History: the 95 photographs from The Halls of ZK
+  album on Flickr, fetched by `tools/fetch_photos.py`, on backgrounds of the
+  ZKO Holodeck and the cafeteria.  The walkthrough's picture viewer is now
+  shared by both pages.
 
 ## 2026-11-13
 

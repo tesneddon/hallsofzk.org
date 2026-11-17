@@ -617,6 +617,59 @@ dl.keys dd {
     }
 }
 
+// Photos page: the album as tiles, in two sections with their own backgrounds
+.photos {
+    min-height: 100vh;
+    padding-bottom: 50px;
+
+    h4 {
+        margin: 40px 0 10px;
+    }
+}
+
+#photos {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+                url(../assets/img/holodeck.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+#photos-after {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)),
+                url(../assets/img/cafeteria.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+        aspect-ratio: 4 / 3;
+        object-fit: cover;
+        border: 1px solid rgba(255, 255, 255, .3);
+        border-radius: 4px;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, .6);
+        transition: transform .2s;
+    }
+
+    a:hover img,
+    a:focus img {
+        transform: scale(1.04);
+    }
+}
+
+@media(min-width:768px) {
+    .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 16px;
+    }
+}
+
 // Stays a flex row on narrow screens (see the .row rule at the end), so
 // the photos can sit two abreast on a phone
 #walkthrough .cheesy {
@@ -658,6 +711,29 @@ dl.keys dd {
 
 #viewer .modal-body img {
     max-height: 80vh;
+}
+
+// Leave room for the caption underneath
+#viewer.captioned .modal-body img {
+    max-height: calc(100vh - 300px);
+}
+
+#viewer .modal-footer {
+    display: block;
+    font-size: 15px;
+    border-top-color: rgba(255, 255, 255, .2);
+
+    p {
+        margin: 0 0 6px;
+        font-size: 15px;
+        line-height: 1.5;
+    }
+
+    .viewer-meta {
+        margin: 0;
+        font-size: 13px;
+        color: rgba(255, 255, 255, .6);
+    }
 }
 
 #viewer .viewer-prev,
