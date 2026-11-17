@@ -37,3 +37,8 @@ Requires Ruby (see `.ruby-version`) and Bundler.
 `_sass/_settings.scss` sets Bootstrap 5's variables to Bootstrap 3's metrics
 and `_sass/_custom.scss` restores the Bootstrap 3 styles the design depends
 on, so the site looks as it did under Bootstrap 3.
+
+## License
+
+The site is released under the MIT license; see `LICENSE.md`.  Changes are
+listed in `CHANGES.md`.
