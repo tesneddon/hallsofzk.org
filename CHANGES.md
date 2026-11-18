@@ -1,5 +1,12 @@
 # Changes
 
+## 2026-11-18
+
+- Barcode page: show the grey wall's "Customers Win WhenWeDeliver" under
+  that message, and redraw the repaired wall with the bar missing from the
+  "W" that makes it "?".  The barcodes are now drawn by
+  `tools/draw_barcode.py`.
+
 ## 2026-11-17
 
 - Track Bootstrap's `vendor/_rfs.scss` partial, which `.gitignore` had been

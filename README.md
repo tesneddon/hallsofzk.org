@@ -26,6 +26,7 @@ Requires Ruby (see `.ruby-version`) and Bundler.
 | `tools/draw_map.py` | Draws the map page's floor plans (`assets/img/map_*.png`) from a checkout of the zk repository: `tools/draw_map.py ~/zk` |
 | `tools/make_icons.py` | Draws the favicon and home screen icons (`favicon.ico`, `apple-touch-icon*.png`): `tools/make_icons.py` |
 | `tools/fetch_photos.py` | Fetches the Photos page's pictures (`assets/img/photos/`) and captions (`_data/photos.json`) from the Flickr album: `tools/fetch_photos.py` |
+| `tools/draw_barcode.py` | Draws the barcode page's barcodes (`assets/img/barcode-*.svg`), with the grey wall's repairs: `tools/draw_barcode.py` |
 | `img/`          | Images not currently used on the site                   |
 
 ## Vendored libraries
