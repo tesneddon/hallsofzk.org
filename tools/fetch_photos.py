@@ -31,7 +31,7 @@ import urllib.request
 from playwright.sync_api import sync_playwright
 
 ALBUM = 'https://www.flickr.com/photos/tesneddon/albums/72157634383159373'
-PHOTO = 'https://www.flickr.com/photos/tesneddon/%s/'
+PHOTO = 'https://www.flickr.com/photos/tesneddon/%s'
 BACKGROUNDS = {'9163061395': 'holodeck.jpg',      # The ZKO Holodeck
                '9163063193': 'cafeteria.jpg'}     # Cafeteria
 AGENT = ('Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 '
